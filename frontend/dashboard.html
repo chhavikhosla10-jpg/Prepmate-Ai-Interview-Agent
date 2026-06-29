@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrepMate AI Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">PrepMate AI</div>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <main class="app-container">
+    <section class="input-panel">
+      <h2>Generate Your Interview Prep</h2>
+
+      <label for="role">Target Role</label>
+      <input id="role" type="text" placeholder="Example: AI Engineer Intern, Frontend Developer, Data Analyst" />
+
+      <label for="resume">Resume / Skills / Projects</label>
+      <textarea id="resume" rows="10" placeholder="Paste your resume, skills, projects, internships, or achievements here..."></textarea>
+
+      <button onclick="generatePrep()">Generate Report</button>
+    </section>
+
+    <section class="output-panel">
+      <h2>AI Preparation Report</h2>
+      <pre id="result">Your report will appear here.</pre>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
