@@ -15,198 +15,66 @@ CANDIDATE RESUME / SKILLS:
 TARGET ROLE:
 {target_role}
 
-
 ==================================================
-ABSOLUTE SOURCE OF TRUTH
-==================================================
-
-The CANDIDATE RESUME / SKILLS is the ONLY source of truth about the candidate.
-
-The TARGET ROLE only describes the requirements of the job.
-
-NEVER use the TARGET ROLE as evidence that the candidate possesses a skill,
-experience, project, technology, responsibility, achievement, or qualification.
-
-Every statement about the candidate must be directly supported by the
-CANDIDATE RESUME / SKILLS.
-
-
-==================================================
-CRITICAL ANTI-HALLUCINATION RULES
+IMPORTANT SOURCE RULES
 ==================================================
 
-1. NEVER invent candidate information.
+1. CANDIDATE RESUME / SKILLS is the ONLY source of truth about the candidate.
 
-2. NEVER invent:
+2. TARGET ROLE describes the job and its requirements. Never use TARGET ROLE
+   as evidence that the candidate possesses a skill, experience, project,
+   achievement, or technology.
+
+3. Never invent candidate information.
+
+4. Never invent:
+   - skills
    - projects
    - companies
    - internships
-   - jobs
    - education
    - achievements
    - responsibilities
+   - datasets
+   - algorithms used
+   - technologies used
    - teamwork
-   - deadlines
    - challenges
-   - mistakes
+   - deadlines
    - feedback
+   - mistakes
    - solutions
    - results
    - performance improvements
-   - datasets
-   - algorithms
-   - technologies used
-   - tools used
    - deployment experience
-   - leadership experience
-   - personal experiences
 
-3. A SKILL listed in the resume only proves that the candidate lists that
-   skill.
+5. Every candidate-specific statement must be directly supported by
+   CANDIDATE RESUME / SKILLS.
 
-4. A listed skill does NOT prove that the candidate:
-   - used it in a project
-   - built an application with it
-   - deployed it
-   - integrated it
-   - used it professionally
-   - used it with another technology
-   - achieved a result with it
+6. Do not infer experience merely because a skill is listed.
 
-5. For example, if the resume says:
-   "React.js, Git, REST APIs"
+7. Do not infer project details from a project name.
 
-   You MAY say:
-   "The candidate lists React.js, Git, and REST APIs as skills."
+8. A project name only proves that the candidate lists that project.
 
-   You MUST NOT automatically say:
-   "The candidate built React applications using REST APIs and Git."
+9. If the candidate lists "React.js" as a skill, do not automatically claim
+   that the candidate has experience with hooks, Redux, state management,
+   API integration, routing, testing, or deployment unless explicitly stated.
 
-   unless the resume explicitly says that.
+10. If the candidate lists a project but provides no project details, do not
+    invent its purpose, features, responsibilities, challenges, technologies,
+    results, users, or implementation details.
 
-6. Do not convert a project name into invented implementation details.
+11. If professional experience is not explicitly provided, do not claim
+    professional experience.
 
-7. Do not assume how a project was built unless the resume explicitly
-   provides those details.
+12. Do not invent a company name.
 
-8. Do not assume that a candidate worked in a team unless the resume
-   explicitly says so.
-
-9. Do not assume that a candidate faced a challenge unless the resume
-   explicitly describes that challenge.
-
-10. Do not assume that a candidate received feedback unless the resume
-    explicitly states it.
-
-11. Do not assume that a candidate met a deadline unless the resume
-    explicitly states it.
-
-12. Do not assume that a candidate achieved a result unless the resume
-    explicitly states the result.
-
-13. Do not use phrases such as:
-    "strong experience"
-    "hands-on experience"
-    "professional experience"
-    "successfully implemented"
-    "successfully developed"
-    "effectively used"
-    "demonstrated expertise"
-    unless the resume explicitly supports the claim.
+13. Do not use placeholders such as [Your Name], [Company Name], or [Company].
 
 14. Keep the report realistic for a student or fresher.
 
-15. Do not invent a company name.
-
-16. Do not use placeholders such as:
-    [Name]
-    [Company]
-    [Project]
-    [Your Name]
-
-17. Do not mention information that is not present in the candidate resume.
-
-18. If information is missing, OMIT it or clearly state that the information
-    was not provided.
-
-19. Do not use the job description to fill missing candidate information.
-
-
-==================================================
-HR / BEHAVIORAL ANSWER RULES
-==================================================
-
-HR and behavioral questions are about PERSONAL EXPERIENCE.
-
-Before answering an HR question, check whether the candidate resume explicitly
-contains the experience needed to answer it.
-
-If the resume does NOT contain that experience, NEVER create a first-person story.
-
-Do NOT write fictional statements such as:
-
-"I faced..."
-"I worked with..."
-"I received..."
-"I solved..."
-"I improved..."
-"I achieved..."
-"I handled..."
-"I learned..."
-"I overcame..."
-"I managed..."
-"I collaborated..."
-"I delivered..."
-
-unless the exact fact is explicitly supported by the resume.
-
-If the required personal experience is missing, use EXACTLY this format:
-
-**Question:** [question]
-
-**Answer:** The candidate should answer this using a real example from their experience. A suitable structure is: [brief guidance on what the candidate should explain].
-
-The guidance must tell the candidate what REAL information to provide.
-
-For example:
-
-**Question:** Tell me about a challenging project you worked on.
-
-**Answer:** The candidate should answer this using a real example from their experience. A suitable structure is: briefly describe the project, explain the actual challenge you encountered, describe the actual steps you took, and mention the actual result.
-
-Do NOT invent the challenge, solution, or result.
-
-If the resume explicitly contains enough information to answer an HR question,
-you may use that information, but you must not add details beyond what is stated.
-
-
-==================================================
-TECHNICAL ANSWER RULES
-==================================================
-
-Technical questions must have factual technical answers.
-
-You may explain general technical concepts even if the candidate's resume
-does not contain the concept.
-
-However, do NOT claim that the candidate personally used a technical technique
-unless the resume explicitly states that they used it.
-
-For example:
-
-If the resume lists:
-"REST APIs"
-
-You may ask:
-"What are REST APIs and how do they work?"
-
-You should NOT ask:
-"How did you use REST APIs in your project?"
-
-unless the resume explicitly states that the candidate used REST APIs in that project.
-
-Technical answers should explain the concept accurately and concisely.
-
+15. Keep the report concise.
 
 ==================================================
 SECTION 1 — PERSONALIZED CANDIDATE SUMMARY
@@ -223,21 +91,26 @@ You may mention:
 
 Do NOT infer experience from skills.
 
-For example, if the resume says:
+For example, if the candidate information says:
+
 "Skills: React.js, JavaScript, HTML, CSS"
 
 write:
+
 "The candidate lists React.js, JavaScript, HTML, and CSS as skills."
 
 Do NOT write:
+
 "The candidate has experience building dynamic React.js applications."
 
 unless that experience is explicitly stated.
 
-If the resume says:
+If the candidate information says:
+
 "Project: React.js Frontend Application"
 
 write:
+
 "The candidate lists a React.js frontend application as a project."
 
 Do NOT invent:
@@ -254,123 +127,144 @@ Do NOT invent:
 
 unless explicitly provided.
 
-If professional experience is not provided, do not claim professional experience.
-
-If project details are not provided, do not invent project details.
-
 Areas for improvement may ONLY be mentioned when supported by an explicit
 comparison with TARGET ROLE requirements.
+
 ==================================================
 SECTION 2 — HR INTERVIEW QUESTIONS
 ==================================================
 
-Provide EXACTLY 5 HR or behavioral questions.
+Provide EXACTLY 5 HR and behavioral questions.
 
-Questions must be relevant to the target role and suitable for a student or fresher.
+Questions should focus on:
+- motivation
+- communication
+- learning
+- feedback
+- teamwork
+- adaptability
+- problem-solving
+- time management
 
-Do not make questions assume that the candidate has an experience that is not
-provided.
+Do NOT ask technical knowledge questions in this section.
 
-Good examples:
+Do NOT assume that the candidate has experienced a particular situation.
 
-"Why are you interested in this role?"
-
-"How do you approach learning a new technology?"
-
-"Tell me about a project you worked on."
-
-"Describe a challenge you experienced during a project."
-
-"How do you handle feedback?"
-
-These questions are allowed even when the resume does not provide the answer,
-because Section 4 will use the safe answer template instead of inventing a story.
-
+The questions must not themselves claim that the candidate has:
+- faced a challenge
+- met a deadline
+- worked in a team
+- received feedback
+- achieved a result
+- made a mistake
 
 ==================================================
 SECTION 3 — TECHNICAL INTERVIEW QUESTIONS
 ==================================================
 
-Provide EXACTLY 5 technical interview questions.
+Provide EXACTLY 5 role-specific technical questions.
 
-Questions must be relevant to BOTH:
-- the target role
-- the candidate's actual listed skills
+Questions must be based on:
+1. the candidate's explicitly listed skills, and
+2. the explicitly stated requirements in TARGET ROLE.
 
-Questions may test:
-- JavaScript
-- React.js
-- HTML
-- CSS
-- REST APIs
-- Git
-- other technologies explicitly listed by the candidate
+Do not assume technologies that are not present in either source.
 
-Questions may also test important target-role requirements that are NOT in
-the candidate resume, because those can be used to identify skill gaps.
-
-IMPORTANT:
-
-Do NOT phrase a question as if the candidate definitely used a technology.
-
-Instead of:
-
-"How did you implement REST APIs in your React project?"
-
-use:
-
-"What are REST APIs and how does a frontend application typically communicate with them?"
-
-Instead of:
-
-"How did you optimize your React application?"
-
-use:
-
-"How can the performance of a React application be optimized?"
-
-Questions must test knowledge, not invent experience.
-
+Questions may test fundamental concepts related to the candidate's listed
+skills.
 
 ==================================================
 SECTION 4 — STRONG MODEL ANSWERS
 ==================================================
 
-Provide strong answers for IMPORTANT questions from Sections 2 and 3.
+Provide strong answers for the HR and technical questions.
 
-Include BOTH:
-- HR / behavioral answers
-- technical answers
+IMPORTANT:
 
-For HR questions:
+Provide answers for ALL 5 HR questions and ALL 5 technical questions.
 
-If the resume does NOT provide a real personal example, use EXACTLY:
+-------------------------
+HR ANSWER RULE
+-------------------------
+
+For every HR or behavioral question, check whether the candidate information
+explicitly contains a real personal experience that answers the question.
+
+If the required personal experience is NOT provided, DO NOT create a
+first-person answer.
+
+Use this exact format:
 
 **Question:** [question]
 
 **Answer:** The candidate should answer this using a real example from their experience. A suitable structure is: [brief guidance].
 
-Do NOT provide a fictional first-person answer.
+Do NOT invent first-person statements such as:
 
-For technical questions:
+"I faced..."
+"I worked with..."
+"I received..."
+"I solved..."
+"I improved..."
+"I achieved..."
+"I handled..."
+"I learned..."
+"I overcame..."
 
-Provide a factual technical answer.
+unless the corresponding fact is explicitly present in the candidate information.
 
-You may connect the technical explanation to a candidate skill only by saying
-that the skill is listed, not by inventing how it was used.
+For example, if the candidate information only says:
 
-For example:
+"Built a React.js frontend application."
 
-CORRECT:
-"React.js is a JavaScript library used for building user interfaces. A key
-concept is component-based development, where the UI is divided into reusable
-components."
+and the question is:
 
-INCORRECT:
-"The candidate used React components to build their application."
+"Tell me about a challenge you faced while building a project."
 
-unless the resume explicitly states this.
+The answer MUST NOT say:
 
+"I faced a problem with React..."
+"I debugged the application..."
+"I searched online..."
+"I solved the issue..."
+
+because those details were not provided.
+
+Instead write:
+
+**Question:** Tell me about a challenge you faced while building a project.
+
+**Answer:** The candidate should answer this using a real example from their experience. A suitable structure is: briefly describe the project, explain the actual challenge encountered, describe the actual steps taken to address it, and mention the actual result.
+
+Project names alone do NOT prove:
+- challenges
+- teamwork
+- deadlines
+- feedback
+- achievements
+- mistakes
+- solutions
+- results
+
+-------------------------
+TECHNICAL ANSWER RULE
+-------------------------
+
+For technical questions, provide an accurate factual technical explanation.
+
+You may explain concepts related to the candidate's listed skills.
+
+You may NOT claim that the candidate personally used a technique unless that
+fact is explicitly stated in CANDIDATE RESUME / SKILLS.
+
+For example, if the candidate lists React.js but does not mention useState,
+do not say:
+
+"The candidate used useState in their project."
+
+Instead explain the concept generally:
+
+"`useState` is a React Hook used to manage local component state."
 
 ==================================================
 SECTION 5 — SKILL GAP ANALYSIS
@@ -383,21 +277,21 @@ Compare the skills explicitly listed in:
 
 Only identify a skill as a skill gap when:
 
-- The TARGET ROLE explicitly requires or mentions that skill, AND
-- The candidate information does not contain that skill.
+- TARGET ROLE explicitly requires or mentions that skill, AND
+- the candidate information does not contain that skill.
 
 IMPORTANT:
 
 - Never invent target-role requirements.
 - Never assume that a job title requires a particular technology.
-- Do not list TypeScript, Jest, Webpack, Sass, Node.js, Redux, or any other
-  technology as a skill gap unless it is explicitly mentioned or required by
-  TARGET ROLE.
+- Do not list TypeScript, Jest, Webpack, Sass, Node.js, Redux, Docker,
+  AWS, Azure, or any other technology as a skill gap unless it is explicitly
+  mentioned or required by TARGET ROLE.
 - Do not call an existing candidate skill a skill gap.
 - Do not infer missing skills from the job title alone.
 
-If TARGET ROLE does not provide enough explicit skill requirements for comparison,
-write exactly:
+If TARGET ROLE does not provide enough explicit skill requirements for
+comparison, write exactly:
 
 "No specific skill gaps can be identified because the target role does not provide enough explicit skill requirements for comparison."
 
@@ -411,16 +305,16 @@ SECTION 6 — 7-DAY LEARNING ROADMAP
 
 Provide EXACTLY 7 days.
 
-The roadmap must be based primarily on the skill gaps identified in Section 5.
+The roadmap must be based on:
+- identified skill gaps, OR
+- relevant improvement areas supported by the candidate information and
+  target role.
 
-If skill gaps exist, focus the seven days on learning those missing skills.
+Do NOT invent candidate weaknesses.
 
-If there are no clear skill gaps, use the roadmap for revision and deeper
-practice of the candidate's existing skills and target-role fundamentals.
+Each day must contain ONE short sentence only.
 
-Each day MUST contain exactly ONE short sentence.
-
-Use EXACTLY this format:
+Use exactly this format:
 
 Day 1: ...
 Day 2: ...
@@ -432,40 +326,74 @@ Day 7: ...
 
 Never stop before Day 7.
 
-Do not add multiple sentences to one day.
-
-
 ==================================================
 SECTION 7 — FINAL CONFIDENCE TIPS
 ==================================================
 
 Give concise and practical interview advice.
 
-Do not claim that the candidate has faced specific interview situations.
+Do NOT claim that the candidate:
+- faced challenges
+- solved problems
+- worked in teams
+- met deadlines
+- achieved results
+- received feedback
 
-Do not invent achievements.
+unless explicitly stated in CANDIDATE RESUME / SKILLS.
 
-Keep the advice suitable for a student or fresher.
-
+Focus on:
+- explaining listed skills clearly
+- explaining listed projects using only provided information
+- being honest about experience
+- reviewing role-relevant technical fundamentals
+- asking for clarification when necessary
+- demonstrating willingness to learn
+- communicating answers clearly
 
 ==================================================
-FINAL OUTPUT RULES
+FINAL VALIDATION
 ==================================================
+
+Before returning the report, verify every candidate-specific statement against
+CANDIDATE RESUME / SKILLS.
+
+Verify that:
+
+1. No candidate skill was invented.
+2. No candidate project was invented.
+3. No project details were invented.
+4. No experience was invented.
+5. No company was invented.
+6. No achievement was invented.
+7. No challenge was invented.
+8. No teamwork experience was invented.
+9. No deadline was invented.
+10. No feedback experience was invented.
+11. No result or performance improvement was invented.
+12. No technology was claimed as a candidate skill merely because it appears
+    in TARGET ROLE.
+13. Skill gaps only come from explicit TARGET ROLE requirements.
+14. Exactly 5 HR questions are provided.
+15. Exactly 5 technical questions are provided.
+16. All HR questions have answers.
+17. All technical questions have answers.
+18. HR answers never contain fictional first-person experiences.
+19. Technical answers are factual and do not falsely claim candidate experience.
+20. Exactly 7 roadmap days are provided.
+21. Each roadmap day is exactly ONE short sentence.
+22. The report contains exactly the seven required sections.
 
 Return ONLY the completed interview preparation report.
 
-Do NOT include:
-- "INTERVIEW PREPARATION REPORT"
-- explanations about the prompt
-- validation notes
-- source notes
-- instructions
-- disclaimers
-- comments about following rules
-- text before Section 1
-- text after Section 7
+Do not include:
+- introductions
+- explanations about these instructions
+- notes about the AI
+- disclaimers outside the report
+- extra sections
 
-The report MUST contain exactly these seven headings:
+Use EXACTLY these seven section headings:
 
 ### 1. Personalized Candidate Summary
 
@@ -480,42 +408,4 @@ The report MUST contain exactly these seven headings:
 ### 6. 7-Day Learning Roadmap
 
 ### 7. Final Confidence Tips
-
-
-==================================================
-FINAL SELF-CHECK BEFORE OUTPUT
-==================================================
-
-Before returning the report, silently verify ALL of the following:
-
-1. There are exactly 7 sections.
-
-2. The section headings match the required headings exactly.
-
-3. There are exactly 5 HR questions.
-
-4. There are exactly 5 technical questions.
-
-5. Every candidate-specific claim comes directly from CANDIDATE RESUME / SKILLS.
-
-6. No skill has been converted into an invented project or experience.
-
-7. No fictional HR story has been created.
-
-8. HR questions without real candidate evidence use the safe answer template.
-
-9. Technical answers are factual.
-
-10. No technology from the target role has been incorrectly presented as a
-    candidate skill.
-
-11. Skill gaps contain only skills missing from the candidate information.
-
-12. The roadmap contains exactly 7 days.
-
-13. Each roadmap day contains exactly one short sentence.
-
-14. No extra text appears before Section 1 or after Section 7.
-
-Return ONLY the final report.
 """
