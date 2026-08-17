@@ -305,12 +305,15 @@ SECTION 6 — 7-DAY LEARNING ROADMAP
 
 Provide EXACTLY 7 days.
 
-The roadmap must be based on:
-- identified skill gaps, OR
-- relevant improvement areas supported by the candidate information and
-  target role.
+If explicit skill gaps are identified in Section 5:
+- Build the roadmap primarily around those skill gaps.
 
-Do NOT invent candidate weaknesses.
+If no specific skill gaps are identified:
+- Create a revision and interview-preparation roadmap based only on the
+  candidate's listed skills and the target role.
+- Do not imply that the candidate lacks any listed skill.
+- Do not introduce new technologies as missing skills.
+- Do not invent projects or practical experience.
 
 Each day must contain ONE short sentence only.
 
