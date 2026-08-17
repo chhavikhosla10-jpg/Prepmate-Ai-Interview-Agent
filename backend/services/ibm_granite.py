@@ -39,7 +39,7 @@ def generate_with_granite(prompt: str) -> str:
         "input": prompt,
         "parameters": {
             "decoding_method": "greedy",
-            "max_new_tokens": 900,
+            "max_new_tokens": 1800,
             "min_new_tokens": 100,
             "temperature": 0.7,
             "repetition_penalty": 1.1
