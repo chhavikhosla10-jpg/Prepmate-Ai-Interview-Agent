@@ -419,19 +419,65 @@ def validate_report(report: str, candidate_skills: list[str]) -> list[str]:
     # --- Semantic check: skill leakage in Summary/Skill Gap sections ---
     summary_section = extract_section(report, "1. Personalized Candidate Summary")
     skillgap_section = extract_section(report, "5. Skill Gap Analysis")
+    roadmap_section = extract_section(report, "6. 7-Day Learning Roadmap")
 
-    # Flag common target-role-only skills appearing as "candidate has" claims
-    suspect_terms = ["typescript", "testing", "jest", "unit testing"]
+    # Any skill mentioned in Section 1 as something the candidate "has" that
+    # isn't in the known skill list is a leak — check generically, not just
+    # against a fixed keyword list, by parsing the "skills in ..." clause.
+    skills_claim = re.search(
+        r"(?i)(?:skills? (?:in|include[s]?)|has skills? (?:in|including))"
+        r"([^.]+)\.",
+        summary_section,
+    )
+    leaked_skills = []
+    if skills_claim:
+        listed = [s.strip().lower() for s in re.split(r",| and ", skills_claim.group(1)) if s.strip()]
+        leaked_skills = [s for s in listed if s not in known_skills]
+        for skill in leaked_skills:
+            violations.append(
+                f"Section 1 attributes '{skill}' to the candidate, but it is "
+                f"not in the candidate's provided skill list — likely a "
+                f"target-role requirement leaking into the candidate summary."
+            )
+
+    # Fallback fixed-keyword check (catches phrasing the regex above misses)
+    suspect_terms = ["typescript", "testing", "jest", "unit testing",
+                      "ui/ux", "debugging", "api integration", "problem solving",
+                      "problem-solving"]
     for term in suspect_terms:
         if term not in known_skills and re.search(
-            rf"(?i)(has|have|skills? in|including)[^.]*\b{re.escape(term)}\b",
-            summary_section,
+            rf"(?i)\b{re.escape(term)}\b", summary_section
         ):
-            violations.append(
-                f"Section 1 may attribute '{term}' to the candidate, but it "
-                f"is not in the candidate's listed skills — verify this is "
-                f"not a target-role requirement leaking into the summary."
-            )
+            if term not in leaked_skills:
+                violations.append(
+                    f"Section 1 mentions '{term}', which is not in the "
+                    f"candidate's listed skills — verify this isn't a "
+                    f"target-role requirement misattributed to the candidate."
+                )
+
+    # --- Cross-section consistency: leaked skills + "no gaps" claim ---
+    claims_no_gaps = bool(re.search(
+        r"(?i)no specific skill gaps were identified", skillgap_section
+    ))
+    if claims_no_gaps and (leaked_skills or violations):
+        violations.append(
+            "Section 5 claims 'no skill gaps' but Section 1 appears to "
+            "attribute non-candidate skills to the candidate — this likely "
+            "means real skill gaps were masked by the Section 1 leak. "
+            "Re-verify Section 5 against the candidate's actual skill list."
+        )
+
+    # --- Cross-section consistency: roadmap implies a gap that Section 5 denies ---
+    if claims_no_gaps:
+        for term in suspect_terms:
+            if term not in known_skills and re.search(
+                rf"(?i)\b{re.escape(term)}\b", roadmap_section
+            ):
+                violations.append(
+                    f"Day-by-day roadmap references '{term}' as something to "
+                    f"learn/practice, which contradicts Section 5's claim of "
+                    f"'no skill gaps'."
+                )
 
     return violations
 
