@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/generate";
+const API_URL = "https://prepmate-ai-interview-agent.onrender.com/generate";
 
 async function generatePrep() {
   const role = document.getElementById("role").value.trim();
