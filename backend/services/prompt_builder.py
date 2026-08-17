@@ -302,4 +302,47 @@ Use exactly these seven section headings:
 ### 6. 7-Day Learning Roadmap
 
 ### 7. Final Confidence Tips
+
+STRICT FINAL CHECK:
+
+Before generating the final answer, perform these checks:
+
+1. Candidate claims:
+Every statement saying the candidate "has", "used", "built", "worked with",
+"experienced", "implemented", "developed", "achieved", "improved", "handled",
+or "demonstrated" MUST be directly supported by CANDIDATE RESUME / SKILLS.
+
+2. Job requirements:
+Never treat a requirement from TARGET ROLE as a candidate skill.
+If the role requires a skill that is absent from the resume, put it under
+Skill Gap Analysis.
+
+3. HR answers:
+Never create a first-person answer for an HR question unless the resume
+explicitly provides the required personal experience.
+Use the safe template instead.
+
+4. Project claims:
+A project name alone does NOT prove challenges, teamwork, deadlines,
+feedback, mistakes, solutions, achievements, or results.
+
+5. Technical answers:
+Explain the technical concept factually, but do not say the candidate
+personally used a technique unless the resume explicitly says so.
+
+6. Skill gaps:
+Do NOT say "No clear skill gaps" merely because the candidate has several
+skills.
+Compare the candidate's skills against the TARGET ROLE requirements and list
+missing relevant skills.
+
+7. Final Confidence Tips:
+Give general interview advice only.
+Do not say "discuss the challenges you faced", "explain the solutions you
+implemented", or similar statements unless those experiences are explicitly
+provided in the resume.
+
+8. Do not add facts that are not present in the candidate information.
+
+9. The final report must contain exactly these seven sections and nothing else.
 """
