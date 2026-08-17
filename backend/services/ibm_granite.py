@@ -7,28 +7,35 @@ from utils.config import (
     get_watsonx_generation_url
 )
 
+
 def get_access_token() -> str:
     response = requests.post(
         IBM_TOKEN_URL,
         data={
             "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
-            "apikey": IBM_API_KEY,
+            "apikey": IBM_API_KEY.strip(),
         },
         headers={"Content-Type": "application/x-www-form-urlencoded"},
         timeout=30,
     )
-    response.raise_for_status()
+    if not response.ok:
+        raise RuntimeError(
+            f"IAM token request failed ({response.status_code}): {response.text}"
+        )
     return response.json()["access_token"]
+
 
 def generate_with_granite(prompt: str) -> str:
     if not IBM_API_KEY or not IBM_PROJECT_ID:
-        raise ValueError("IBM credentials missing. Add IBM_API_KEY and IBM_PROJECT_ID in backend/.env")
+        raise ValueError(
+            "IBM credentials missing. Add IBM_API_KEY and IBM_PROJECT_ID in backend/.env"
+        )
 
     token = get_access_token()
 
     payload = {
-        "model_id": IBM_MODEL_ID,
-        "project_id": IBM_PROJECT_ID,
+        "model_id": IBM_MODEL_ID.strip(),
+        "project_id": IBM_PROJECT_ID.strip(),
         "input": prompt,
         "parameters": {
             "decoding_method": "greedy",
@@ -39,8 +46,10 @@ def generate_with_granite(prompt: str) -> str:
         }
     }
 
+    url = get_watsonx_generation_url()
+
     response = requests.post(
-        get_watsonx_generation_url(),
+        url,
         json=payload,
         headers={
             "Authorization": f"Bearer {token}",
@@ -49,6 +58,16 @@ def generate_with_granite(prompt: str) -> str:
         },
         timeout=60
     )
-    response.raise_for_status()
+
+    # THIS is the important change: surface IBM's actual JSON error body
+    # instead of letting raise_for_status() swallow it into a generic message.
+    if not response.ok:
+        raise RuntimeError(
+            f"watsonx.ai request failed ({response.status_code}) "
+            f"for url={url} model_id={payload['model_id']} "
+            f"project_id={payload['project_id'][:8]}...\n"
+            f"Response body: {response.text}"
+        )
+
     data = response.json()
     return data["results"][0]["generated_text"]

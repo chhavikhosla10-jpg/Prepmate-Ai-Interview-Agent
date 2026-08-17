@@ -16,7 +16,7 @@ def generate_interview_prep(request: InterviewRequest):
         return InterviewResponse(
             result=generate_fallback_report(request.resume_text, request.target_role),
             source="Fallback demo response",
-            note=f"IBM Granite not connected yet: {str(error)}"
+            note=f"AI model not connected yet: {str(error)}"
         )
 
 def generate_fallback_report(resume_text: str, target_role: str) -> str:
