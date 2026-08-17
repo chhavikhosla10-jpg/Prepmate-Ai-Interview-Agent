@@ -212,37 +212,54 @@ Technical answers should explain the concept accurately and concisely.
 SECTION 1 — PERSONALIZED CANDIDATE SUMMARY
 ==================================================
 
-Create a concise summary based ONLY on information explicitly present in the
-candidate resume.
+Summarize ONLY information explicitly present in CANDIDATE RESUME / SKILLS.
 
-Mention:
+You may mention:
 - explicitly listed skills
 - explicitly stated projects
 - explicitly stated experience
-- explicitly stated education if relevant
-- strengths that can reasonably be derived directly from the listed skills
+- explicitly stated education
+- explicitly stated achievements
 
-Do NOT claim project implementation details that are not stated.
+Do NOT infer experience from skills.
 
-Do NOT turn skills into experience.
+For example, if the resume says:
+"Skills: React.js, JavaScript, HTML, CSS"
 
-For example:
+write:
+"The candidate lists React.js, JavaScript, HTML, and CSS as skills."
 
-CORRECT:
-"The candidate lists HTML, CSS, JavaScript, React.js, Git, and REST APIs as skills."
+Do NOT write:
+"The candidate has experience building dynamic React.js applications."
 
-INCORRECT:
-"The candidate has hands-on experience building scalable React applications
-using REST APIs."
+unless that experience is explicitly stated.
 
-Only mention areas for improvement when they can be identified by comparing
-the target role requirements against the candidate's explicitly listed skills.
+If the resume says:
+"Project: React.js Frontend Application"
 
-Clearly distinguish between:
-- skills the candidate HAS
-- skills the TARGET ROLE REQUIRES
+write:
+"The candidate lists a React.js frontend application as a project."
 
+Do NOT invent:
+- project purpose
+- features
+- responsibilities
+- challenges
+- solutions
+- APIs used
+- deployment
+- teamwork
+- results
+- achievements
 
+unless explicitly provided.
+
+If professional experience is not provided, do not claim professional experience.
+
+If project details are not provided, do not invent project details.
+
+Areas for improvement may ONLY be mentioned when supported by an explicit
+comparison with TARGET ROLE requirements.
 ==================================================
 SECTION 2 — HR INTERVIEW QUESTIONS
 ==================================================
@@ -359,30 +376,34 @@ unless the resume explicitly states this.
 SECTION 5 — SKILL GAP ANALYSIS
 ==================================================
 
-Compare:
+Compare the skills explicitly listed in:
 
-A. Skills explicitly present in the candidate resume.
+1. CANDIDATE RESUME / SKILLS
+2. TARGET ROLE
 
-WITH:
+Only identify a skill as a skill gap when:
 
-B. Skills explicitly required or useful for the target role.
+- The TARGET ROLE explicitly requires or mentions that skill, AND
+- The candidate information does not contain that skill.
 
-Only list a skill as a GAP when:
+IMPORTANT:
 
-- the target role requires or strongly prefers it
-AND
-- the candidate resume does NOT list it.
+- Never invent target-role requirements.
+- Never assume that a job title requires a particular technology.
+- Do not list TypeScript, Jest, Webpack, Sass, Node.js, Redux, or any other
+  technology as a skill gap unless it is explicitly mentioned or required by
+  TARGET ROLE.
+- Do not call an existing candidate skill a skill gap.
+- Do not infer missing skills from the job title alone.
 
-Do NOT list a skill as a gap if the candidate already lists it.
+If TARGET ROLE does not provide enough explicit skill requirements for comparison,
+write exactly:
 
-Do NOT invent additional requirements.
+"No specific skill gaps can be identified because the target role does not provide enough explicit skill requirements for comparison."
 
-Use a concise bullet list.
-
-If there are no clear skill gaps, write:
-
-"No clear skill gaps can be identified from the provided candidate information and target role."
-
+If explicit requirements exist, list ONLY the skills that:
+1. are required by TARGET ROLE, and
+2. are absent from CANDIDATE RESUME / SKILLS.
 
 ==================================================
 SECTION 6 — 7-DAY LEARNING ROADMAP
