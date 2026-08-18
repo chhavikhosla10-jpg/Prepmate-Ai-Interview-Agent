@@ -153,16 +153,16 @@ The application generates:
 ## Screenshots
 
 ### Opening Page
-![PrepMate AI Opening Page](screenshots/home.png)
+![PrepMate AI Opening Page](screenshots/home.png.png)
 
 ### Dashboard
-![PrepMate AI Dashboard](screenshots/dashboard.png)
+![PrepMate AI Dashboard](screenshots/dashboard.png.png)
 
 ### Generated Output – Part 1
-![PrepMate AI Generated Output Part 1](screenshots/output-1.png)
+![PrepMate AI Generated Output Part 1](screenshots/output-1.png.png)
 
 ### Generated Output – Part 2
-![PrepMate AI Generated Output Part 2](screenshots/output-2.png)
+![PrepMate AI Generated Output Part 2](screenshots/output-2.png.png)
 
 ## Deployment
 
