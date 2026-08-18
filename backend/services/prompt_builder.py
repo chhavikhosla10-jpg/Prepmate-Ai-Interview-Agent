@@ -46,15 +46,7 @@ For personal HR questions without evidence, use:
 "The candidate should answer this using a real example from their experience."
 Never invent a personal story.
 
-### 5. Skill Gap Analysis
-Compare candidate information directly against the target job requirements.
-List ONLY job requirements missing from the candidate information.
-Do not add any other skills.
-
-If there are no gaps, write:
-"No specific skill gaps were identified."
-
-### 6. 7-Day Learning Roadmap
+### 5. 7-Day Learning Roadmap
 Give exactly 7 short days focused on the identified skill gaps.
 
 Day 1: ...
@@ -65,7 +57,7 @@ Day 5: ...
 Day 6: ...
 Day 7: ...
 
-### 7. Final Confidence Tips
+### 6. Final Confidence Tips
 Give exactly 5 concise and practical tips.
 
 FINAL CHECK:
