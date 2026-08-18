@@ -1,46 +1,63 @@
 # PrepMate AI – IBM Cloud Powered Interview Preparation Agent
 
-PrepMate AI is a complete AI interview preparation web application for students and freshers. It generates personalized HR questions, technical questions, model answers, skill-gap analysis, and a 7-day learning roadmap using IBM watsonx.ai / IBM Granite.
+PrepMate AI is an AI-powered interview preparation web application designed for students and freshers. It generates personalized interview preparation based on the candidate's skills, resume information, target role, and job description.
+
+## Live Demo
+
+**Frontend:**
+https://prepmate-ai-interview-agent.netlify.app/
+
+**Backend API:**
+https://prepmate-ai-interview-agent.onrender.com/
 
 ## Problem Statement
 
-Students often prepare for internships and placements using generic interview questions. They lack personalized guidance based on their resume, skills, projects, and target job role.
+Students often prepare for internships and placements using generic interview questions. They need personalized preparation based on their skills, projects, resume information, and the requirements of the target position.
 
 ## Solution
 
-PrepMate AI allows a user to paste their resume or skills, enter a target role, and generate a structured interview preparation report.
+PrepMate AI allows users to provide three inputs:
+
+* **Target Role** – The position the candidate is preparing for.
+* **Job Description** – The responsibilities and required skills for the position.
+* **Resume / Skills / Projects** – The candidate's background, skills, projects, and experience.
+
+The application uses these inputs to generate a personalized interview preparation report.
 
 ## Features
 
-- Resume/skills input
-- Target role input
-- HR interview questions
-- Technical interview questions
-- Model answers
-- Skill-gap analysis
-- 7-day roadmap
-- IBM Granite integration-ready
-- Fallback demo mode when IBM credentials are not added
-- FastAPI backend
-- Responsive frontend
-- Render deployment notes
+* Target role input
+* Job description input
+* Resume / skills / projects input
+* Personalized candidate summary
+* HR interview questions
+* Technical interview questions
+* Strong model answers
+* 7-day learning roadmap
+* Final confidence tips
+* AI-powered interview preparation
+* Responsive frontend
+* FastAPI backend
+* IBM Granite integration
+* Fallback mode when IBM credentials are unavailable
 
 ## IBM Cloud Services Used
 
-- IBM watsonx.ai
-- IBM Granite Foundation Model
+* IBM watsonx.ai
+* IBM Granite Foundation Model
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Python, FastAPI
-- AI: IBM watsonx.ai Granite
-- Deployment: GitHub + Render
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Python, FastAPI
+* **AI:** IBM watsonx.ai / IBM Granite
+* **Version Control:** Git, GitHub
+* **Deployment:** Netlify, Render
 
 ## Folder Structure
 
 ```text
-PrepMateAI_Complete_Working/
+PrepMate-Ai-Interview-Agent/
 ├── backend/
 │   ├── main.py
 │   ├── routes/
@@ -60,7 +77,9 @@ PrepMateAI_Complete_Working/
 │   ├── dashboard.html
 │   ├── results.html
 │   └── assets/
-├── docs/
+├── screenshots/
+│   ├── dashboard.png
+│   └── report.png
 ├── tests/
 ├── deployment/
 ├── requirements.txt
@@ -76,19 +95,21 @@ cd backend
 uvicorn main:app --reload
 ```
 
-Backend URL:
+Backend runs at:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-## Run Frontend
+## Run Frontend Locally
 
 Open:
 
 ```text
 frontend/index.html
 ```
+
+You can also use VS Code Live Server.
 
 ## API Endpoint
 
@@ -100,8 +121,9 @@ Example request:
 
 ```json
 {
-  "resume_text": "Python, SQL, FastAPI, GitHub, ML projects",
-  "target_role": "AI Engineer Intern"
+  "resume_text": "HTML, CSS, JavaScript, React.js, Git, REST APIs",
+  "target_role": "Frontend Developer Intern",
+  "job_description": "We are looking for a Frontend Developer Intern with knowledge of HTML, CSS, JavaScript, React.js, REST APIs, Git, responsive design, and debugging."
 }
 ```
 
@@ -112,11 +134,40 @@ Create `backend/.env` using `backend/.env.example`.
 ```text
 IBM_API_KEY=your_key_here
 IBM_PROJECT_ID=your_project_id_here
-IBM_REGION=us-south
+IBM_REGION=your_region_here
 ```
 
-The app works in fallback demo mode even without IBM credentials.
+Never commit your actual IBM API key to GitHub.
+
+## Generated Interview Report
+
+The application generates:
+
+1. Personalized Candidate Summary
+2. HR Interview Questions
+3. Technical Interview Questions
+4. Strong Model Answers
+5. 7-Day Learning Roadmap
+6. Final Confidence Tips
+
+## Screenshots
+
+### Dashboard
+
+![PrepMate AI Dashboard](screenshots/dashboard.png)
+
+### Interview Preparation Report
+
+![Interview Preparation Report](screenshots/report.png)
+
+## Deployment
+
+The frontend is deployed using Netlify and the FastAPI backend is deployed using Render.
+
+**Frontend:** https://prepmate-ai-interview-agent.netlify.app/
+
+**Backend:** https://prepmate-ai-interview-agent.onrender.com/
 
 ## Author
 
-Chhavi Khosla
+**Chhavi Khosla**
