@@ -153,6 +153,24 @@ The application generates:
 ## Screenshots
 
 ### Dashboard
+![PrepMate AI Dashboard](screenshots/dashboard.png)
+
+### Filled Input
+![PrepMate AI Filled Input](screenshots/filled-input.png)
+
+### Candidate Summary
+![PrepMate AI Candidate Summary](screenshots/candidate-summary.png)
+
+### Interview Questions
+![PrepMate AI Interview Questions](screenshots/interview-questions.png)
+
+### Model Answers
+![PrepMate AI Model Answers](screenshots/model-answers.png)
+
+### Learning Roadmap
+![PrepMate AI Learning Roadmap](screenshots/roadmap.png)
+
+### Dashboard
 
 ![PrepMate AI Dashboard](screenshots/dashboard.png)
 
